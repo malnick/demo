@@ -10,6 +10,7 @@ import (
 	"strings"
 	"time"
 
+	tm "github.com/buger/goterm"
 	"github.com/gookit/color"
 	"github.com/pkg/errors"
 	"github.com/urfave/cli/v2"
@@ -129,6 +130,8 @@ func (r *Run) RunWithOptions(opts Options) error {
 		if err := step.run(i+1, len(r.steps)); err != nil {
 			return err
 		}
+
+		tm.Clear()
 	}
 	return r.cleanup()
 }
