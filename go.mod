@@ -1,4 +1,4 @@
-module github.com/saschagrunert/demo
+module github.com/malnick/demo
 
 go 1.13
 
